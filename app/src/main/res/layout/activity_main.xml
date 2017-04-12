@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.android.scrabblescorekeeper.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/scoreBox"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7"
+        android:background="@color/colorBackgroundDarker"
+        android:padding="@dimen/MediumMargin"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/player1_name"
+                style="@style/TeamNameTextViews"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/player1" />
+
+            <TextView
+                android:id="@+id/player1_score"
+                style="@style/ScoreTextViews"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/initialScore" />
+
+            <Button
+                android:id="@+id/addToPlayer1"
+                style="@style/AddToPlayer1Button"
+                android:layout_width="@dimen/AddScoreButtonWidth"
+                android:layout_height="@dimen/AddScoreButtonHeight"
+                android:layout_gravity="center_horizontal"
+                android:onClick="SelectPlayer1"
+                android:text="@string/addToPlayer1" />
+
+            <Button
+                android:id="@+id/addBonusToPlayer1"
+                style="@style/AddBonus"
+                android:layout_width="@dimen/AddScoreButtonWidth"
+                android:layout_height="@dimen/AddScoreButtonHeight"
+                android:layout_gravity="center_horizontal"
+                android:onClick="AddBonusToPlayer1"
+                android:text="@string/addBonus" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimaryDark"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/player2_name"
+                style="@style/TeamNameTextViews"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/player2" />
+
+            <TextView
+                android:id="@+id/player2_score"
+                style="@style/ScoreTextViews"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/initialScore" />
+
+            <Button
+                android:id="@+id/addToPlayer2"
+                style="@style/AddToPlayer2Button"
+                android:layout_width="@dimen/AddScoreButtonWidth"
+                android:layout_height="@dimen/AddScoreButtonHeight"
+                android:layout_gravity="center_horizontal"
+                android:onClick="SelectPlayer2"
+                android:text="@string/addToPlayer2" />
+
+            <Button
+                android:id="@+id/addBonusToPlayer2"
+                style="@style/AddBonus"
+                android:layout_width="@dimen/AddScoreButtonWidth"
+                android:layout_height="@dimen/AddScoreButtonHeight"
+                android:layout_gravity="center_horizontal"
+                android:onClick="AddBonusToPlayer2"
+                android:text="@string/addBonus" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/Background"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="11"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/resetAll"
+                style="@style/ResetAllButtonView"
+                android:layout_width="@dimen/ResetAllButtonWidth"
+                android:layout_height="@dimen/ResetAllButtonHeight"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:onClick="ResetAll"
+                android:text="@string/resetAll" />
+
+            <TextView
+                android:id="@+id/tempScore"
+                style="@style/TempScoreTextView"
+                android:layout_width="@dimen/ScoreTextViewWidth"
+                android:layout_height="@dimen/ScoreTextViewHeight"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text="@string/initialScore" />
+
+            <Button
+                android:id="@+id/resetTemporary"
+                style="@style/ResetButtonView"
+                android:layout_width="@dimen/ResetButtonWidth"
+                android:layout_height="@dimen/ResetButtonHeight"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:onClick="Reset"
+                android:text="@string/reset" />
+
+        </RelativeLayout>
+
+            <TextView
+                android:id="@+id/word"
+                style="@style/WordTextView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/WordTextViewHeight"
+                android:text=""
+                android:gravity="center_vertical" />
+
+        <LinearLayout
+            android:id="@+id/keyboard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.ButtonBarLayout
+                android:id="@+id/firstKeyboardRow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/a"
+                    style="@style/Keyboard"
+                    android:layout_width="@dimen/ButtonWidth"
+                    android:layout_height="@dimen/ButtonHeight"
+                    android:onClick="AddA"
+                    android:text="@string/a" />
+
+                <Button
+                    android:id="@+id/b"
+                    style="@style/Keyboard"
+                    android:layout_width="@dimen/ButtonWidth"
+                    android:layout_height="@dimen/ButtonHeight"
+                    android:onClick="AddB"
+                    android:text="@string/b" />
+
+                <Button
+                    android:id="@+id/c"
+                    style="@style/Keyboard"
+                    android:layout_width="@dimen/ButtonWidth"
+                    android:layout_height="@dimen/ButtonHeight"
+                    android:onClick="AddC"
+                    android:text="@string/c" />
+
+                <Button
+                    android:id="@+id/d"
+                    style="@style/Keyboard"
+                    android:layout_width="@dimen/ButtonWidth"
+                    android:layout_height="@dimen/ButtonHeight"
+                    android:onClick="AddD"
+                    android:text="@string/d" />
+
+                <Button
+                    android:id="@+id/e"
+                    style="@style/Keyboard"
+                    android:layout_width="@dimen/ButtonWidth"
+                    android:layout_height="@dimen/ButtonHeight"
+                    android:onClick="AddE"
+                    android:text="@string/e" />
+
+                <Button
+                    android:id="@+id/f"
+                    style="@style/Keyboard"
+                    android:layout_width="@dimen/ButtonWidth"
+                    android:layout_height="@dimen/ButtonHeight"
+                    android:onClick="AddF"
+                    android:text="@string/f" />
+
+                <Button
+                    android:id="@+id/g"
+                    style="@style/Keyboard"
+                    android:layout_width="@dimen/ButtonWidth"
+                    android:layout_height="@dimen/ButtonHeight"
+                    android:onClick="AddG"
+                    android:text="@string/g" />
+
+            </android.support.v7.widget.ButtonBarLayout>
+
+            <android.support.v7.widget.ButtonBarLayout
+                android:id="@+id/secondKeyboardRow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/h"
+                    style="@style/Keyboard"
+                    android:layout_width="@dimen/ButtonWidth"
+                    android:layout_height="@dimen/ButtonHeight"
+                    android:onClick="AddH"
+                    android:text="@string/h" />
+
+                <Button
+                    android:id="@+id/i"
+                    style="@style/Keyboard"
+                    android:layout_width="@dimen/ButtonWidth"
+                    android:layout_height="@dimen/ButtonHeight"
+                    android:onClick="AddI"
+                    android:text="@string/i" />
+
+                <Button
+                    android:id="@+id/l"
+                    style="@style/Keyboard"
+                    android:layout_width="@dimen/ButtonWidth"
+                    android:layout_height="@dimen/ButtonHeight"
+                    android:onClick="AddL"
+                    android:text="@string/l" />
+
+                <Button
+                    android:id="@+id/m"
+                    style="@style/Keyboard"
+                    android:layout_width="@dimen/ButtonWidth"
+                    android:layout_height="@dimen/ButtonHeight"
+                    android:onClick="AddM"
+                    android:text="@string/m" />
+
+                <Button
+                    android:id="@+id/n"
+                    style="@style/Keyboard"
+                    android:layout_width="@dimen/ButtonWidth"
+                    android:layout_height="@dimen/ButtonHeight"
+                    android:onClick="AddN"
+                    android:text="@string/n" />
+
+                <Button
+                    android:id="@+id/o"
+                    style="@style/Keyboard"
+                    android:layout_width="@dimen/ButtonWidth"
+                    android:layout_height="@dimen/ButtonHeight"
+                    android:onClick="AddO"
+                    android:text="@string/o" />
+
+                <Button
+                    android:id="@+id/p"
+                    style="@style/Keyboard"
+                    android:layout_width="@dimen/ButtonWidth"
+                    android:layout_height="@dimen/ButtonHeight"
+                    android:onClick="AddP"
+                    android:text="@string/p" />
+
+            </android.support.v7.widget.ButtonBarLayout>
+
+            <android.support.v7.widget.ButtonBarLayout
+                android:id="@+id/thirdKeyboardRow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/q"
+                    style="@style/Keyboard"
+                    android:layout_width="@dimen/ButtonWidth"
+                    android:layout_height="@dimen/ButtonHeight"
+                    android:onClick="AddQ"
+                    android:text="@string/q" />
+
+                <Button
+                    android:id="@+id/r"
+                    style="@style/Keyboard"
+                    android:layout_width="@dimen/ButtonWidth"
+                    android:layout_height="@dimen/ButtonHeight"
+                    android:onClick="AddR"
+                    android:text="@string/r" />
+
+                <Button
+                    android:id="@+id/s"
+                    style="@style/Keyboard"
+                    android:layout_width="@dimen/ButtonWidth"
+                    android:layout_height="@dimen/ButtonHeight"
+                    android:onClick="AddS"
+                    android:text="@string/s" />
+
+                <Button
+                    android:id="@+id/t"
+                    style="@style/Keyboard"
+                    android:layout_width="@dimen/ButtonWidth"
+                    android:layout_height="@dimen/ButtonHeight"
+                    android:onClick="AddT"
+                    android:text="@string/t" />
+
+                <Button
+                    android:id="@+id/u"
+                    style="@style/Keyboard"
+                    android:layout_width="@dimen/ButtonWidth"
+                    android:layout_height="@dimen/ButtonHeight"
+                    android:onClick="AddU"
+                    android:text="@string/u" />
+
+                <Button
+                    android:id="@+id/v"
+                    style="@style/Keyboard"
+                    android:layout_width="@dimen/ButtonWidth"
+                    android:layout_height="@dimen/ButtonHeight"
+                    android:onClick="AddV"
+                    android:text="@string/v" />
+
+                <Button
+                    android:id="@+id/z"
+                    style="@style/Keyboard"
+                    android:layout_width="@dimen/ButtonWidth"
+                    android:layout_height="@dimen/ButtonHeight"
+                    android:onClick="AddZ"
+                    android:text="@string/z" />
+
+            </android.support.v7.widget.ButtonBarLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/wordMultiplierButtonsBox"
+                style="@style/WordMultiplierButtonsBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button2P"
+                    style="@style/Button2P"
+                    android:layout_width="@dimen/LargeButtonWidth"
+                    android:layout_height="@dimen/LargeButtonHeight"
+                    android:onClick="WordMultiplyBy2"
+                    android:text="@string/button2w" />
+
+                <Button
+                    android:id="@+id/button3P"
+                    style="@style/Button3P"
+                    android:layout_width="@dimen/LargeButtonWidth"
+                    android:layout_height="@dimen/LargeButtonHeight"
+                    android:onClick="WordMultiplyBy3"
+                    android:text="@string/button3w" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/LetterMultiplierButtonsBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button2L"
+                    style="@style/Button2L"
+                    android:layout_width="@dimen/LargeButtonWidth"
+                    android:layout_height="@dimen/LargeButtonHeight"
+                    android:onClick="LetterMultiplyBy2"
+                    android:text="@string/button2l" />
+
+                <Button
+                    android:id="@+id/button3L"
+                    style="@style/Button3L"
+                    android:layout_width="@dimen/LargeButtonWidth"
+                    android:layout_height="@dimen/LargeButtonHeight"
+                    android:onClick="LetterMultiplyBy3"
+                    android:text="@string/button3l" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

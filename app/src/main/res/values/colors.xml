@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#455A64</color>
+    <color name="colorPrimaryDark">#37474F</color>
+    <color name="colorBackground">#455A64</color>
+    <color name="colorBackgroundDarker">#FFF8E1</color>
+    <color name="colorEditableTextView">#FFFFFF</color>
+
+    <color name="colorTextButton2L">#B71C1C</color>
+    <color name="colorBackButton2L">#FFAB91</color>
+
+    <color name="colorTextButton3L">#FFFFFF</color>
+    <color name="colorBackButton3L">#B71C1C</color>
+
+    <color name="colorTextButton2P">#000000</color>
+    <color name="colorBackButton2P">#FFECB3</color>
+
+    <color name="colorTextButton3P">#FFFFFF</color>
+    <color name="colorBackButton3P">#000000</color>
+
+    <color name="colorAddToPlayer1Text">#FFFFFF</color>
+    <color name="colorAddToPlayer1Back">#37474F</color>
+
+    <color name="colorAddToPlayer2Text">#FFFFFF</color>
+    <color name="colorAddToPlayer2Back">#37474F</color>
+
+    <color name="colorTextResetButton">#37474F</color>
+    <color name="colorBackResetButton">#FFE0B2</color>
+
+    <color name="colorWordMultipliersBack">#CFD8DC</color>
+    <color name="colorLetterMultipliersBack">#CFD8DC</color>
+
+    <color name="colorNormalButtonBack">#E0E0E0</color>
+    <color name="colorNormalButtonText">@android:color/black</color>
+</resources>

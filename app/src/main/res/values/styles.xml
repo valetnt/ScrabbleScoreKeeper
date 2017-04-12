@@ -1,0 +1,171 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="TeamNameTextViews" parent="AppTheme">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginBottom">@dimen/SmallMargin</item>
+    </style>
+
+    <style name="ScoreTextViews" parent="AppTheme">
+        <item name="android:textSize">50sp</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:layout_marginBottom">@dimen/SmallMargin</item>
+    </style>
+
+    <style name="ResetAllButtonView" parent="AppTheme">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@color/colorBackButton3L</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:layout_margin">@dimen/MediumMargin</item>
+    </style>
+
+    <style name="Background" parent="AppTheme">
+        <item name="android:background">@color/colorBackground</item>
+        <item name="android:padding">@dimen/SmallMargin</item>
+    </style>
+
+    <style name="WordTextView" parent="AppTheme">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="@android:fontFamily">sans-serif-light</item>
+        <item name="android:background">@color/colorEditableTextView</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:layout_margin">@dimen/MediumMargin</item>
+    </style>
+
+    <style name="WordTextViewLand" parent="AppTheme">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="@android:fontFamily">sans-serif-light</item>
+        <item name="android:background">@color/colorEditableTextView</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:layout_margin">@dimen/MediumMargin</item>
+    </style>
+
+    <style name="TempScoreTextView" parent="AppTheme">
+        <item name="android:textSize">24sp</item>
+        <item name="@android:fontFamily">sans-serif-light</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:layout_marginLeft">@dimen/MediumMargin</item>
+        <item name="android:layout_marginRight">@dimen/MediumMargin</item>
+    </style>
+
+    <style name="TempScoreTextViewLand" parent="AppTheme">
+        <item name="android:textSize">18sp</item>
+        <item name="@android:fontFamily">sans-serif-light</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:layout_marginLeft">@dimen/MediumMargin</item>
+        <item name="android:layout_marginRight">@dimen/MediumMargin</item>
+    </style>
+
+    <style name="AddToPlayer1Button" parent="AppTheme">
+        <item name="android:background">@color/colorAddToPlayer1Back</item>
+        <item name="android:textColor">@color/colorAddToPlayer1Text</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:layout_margin">@dimen/SmallMargin</item>
+    </style>
+
+    <style name="AddToPlayer2Button" parent="AppTheme">
+        <item name="android:background">@color/colorAddToPlayer2Back</item>
+        <item name="android:textColor">@color/colorAddToPlayer2Text</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:layout_margin">@dimen/SmallMargin</item>
+    </style>
+
+    <style name="AddBonus" parent="AppTheme">
+        <item name="android:background">@color/colorAddToPlayer1Back</item>
+        <item name="android:textColor">@color/colorAddToPlayer1Text</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:layout_margin">@dimen/SmallMargin</item>
+    </style>
+
+    <style name="ResetButtonView" parent="AppTheme">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:background">@color/colorBackResetButton</item>
+        <item name="android:layout_margin">@dimen/MediumMargin</item>
+    </style>
+
+    <style name="Keyboard" parent="AppTheme">
+        <item name="android:background">@color/colorNormalButtonBack</item>
+        <item name="android:textColor">@color/colorNormalButtonText</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_margin">3dp</item>
+    </style>
+
+    <style name="Button2L" parent="AppTheme">
+        <item name="android:background">@color/colorBackButton2L</item>
+        <item name="android:textColor">@color/colorTextButton2L</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:layout_margin">8dp</item>
+    </style>
+
+    <style name="Button3L" parent="AppTheme">
+        <item name="android:background">@color/colorBackButton3L</item>
+        <item name="android:textColor">@color/colorTextButton3L</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:layout_margin">8dp</item>
+    </style>
+
+    <style name="Button2P" parent="AppTheme">
+        <item name="android:background">@color/colorBackButton2P</item>
+        <item name="android:textColor">@color/colorTextButton2P</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:layout_margin">8dp</item>
+    </style>
+
+    <style name="Button3P" parent="AppTheme">
+        <item name="android:background">@color/colorBackButton3P</item>
+        <item name="android:textColor">@color/colorTextButton3P</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:layout_margin">8dp</item>
+    </style>
+
+    <style name="WordMultiplierButtonsBox" parent="AppTheme">
+        <item name="android:background">@color/colorWordMultipliersBack</item>
+        <item name="android:layout_marginTop">12dp</item>
+    </style>
+
+    <style name="LetterMultiplierButtonsBox" parent="AppTheme">
+        <item name="android:background">@color/colorLetterMultipliersBack</item>
+        <item name="android:layout_marginTop">12dp</item>
+    </style>
+
+</resources>

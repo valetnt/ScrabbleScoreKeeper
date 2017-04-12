@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="ButtonWidth">42dp</dimen>
+    <dimen name="ButtonHeight">42dp</dimen>
+
+    <dimen name="LargeButtonWidth">66dp</dimen>
+    <dimen name="LargeButtonHeight">42dp</dimen>
+
+    <dimen name="AddScoreButtonWidth">90dp</dimen>
+    <dimen name="AddScoreButtonHeight">36dp</dimen>
+
+    <dimen name="ResetButtonWidth">90dp</dimen>
+    <dimen name="ResetButtonHeight">40dp</dimen>
+
+    <dimen name="ResetAllButtonWidth">90dp</dimen>
+    <dimen name="ResetAllButtonHeight">40dp</dimen>
+
+    <dimen name="WordTextViewWidthLand">220dp</dimen>
+    <dimen name="WordTextViewHeight">28dp</dimen>
+
+    <dimen name="ScoreTextViewWidth">80dp</dimen>
+    <dimen name="ScoreTextViewWidthLand">60dp</dimen>
+    <dimen name="ScoreTextViewHeight">40dp</dimen>
+
+    <dimen name="SmallMargin">6dp</dimen>
+    <dimen name="MediumMargin">12dp</dimen>
+    <dimen name="BigMargin">20dp</dimen>
+
+</resources>

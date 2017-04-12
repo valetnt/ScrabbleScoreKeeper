@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Segnapunti Scarabeo</string>
+    <string name="player1">Giocatore 1</string>
+    <string name="player2">Giocatore 2</string>
+    <string name="reset">Cancella</string>
+    <string name="resetAll">Nuova partita</string>
+    <string name="addToPlayer1">Aggiungi a 1</string>
+    <string name="addToPlayer2">Aggiungi a 2</string>
+    <string name="button2l">2xL</string>
+    <string name="button2w">2xP</string>
+    <string name="button3l">3xL</string>
+    <string name="button3w">3xP</string>
+</resources>
