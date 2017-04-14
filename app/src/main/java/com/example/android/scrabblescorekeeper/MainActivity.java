@@ -31,79 +31,78 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         setContentView(R.layout.activity_main);
 
-        if(savedInstanceState != null){
+        if (savedInstanceState != null) {
             ((TextView) findViewById(R.id.tempScore)).setText(String.valueOf(savedInstanceState.getInt(TEMP_SCORE)));
             ((TextView) findViewById(R.id.player1_score)).setText(String.valueOf(savedInstanceState.getInt(SCORE_P1)));
             ((TextView) findViewById(R.id.player2_score)).setText(String.valueOf(savedInstanceState.getInt(SCORE_P2)));
-            score=savedInstanceState.getInt(TEMP_SCORE);
-            playerScore1=savedInstanceState.getInt(SCORE_P1);
-            playerScore2=savedInstanceState.getInt(SCORE_P2);
-            multiplier=savedInstanceState.getInt(MULTIPLIER);
-            globalMultiplier=savedInstanceState.getInt(GLOBAL_MULTIPLIER);
-            newWord=String.valueOf(savedInstanceState.getCharSequence(WORD));
+            score = savedInstanceState.getInt(TEMP_SCORE);
+            playerScore1 = savedInstanceState.getInt(SCORE_P1);
+            playerScore2 = savedInstanceState.getInt(SCORE_P2);
+            multiplier = savedInstanceState.getInt(MULTIPLIER);
+            globalMultiplier = savedInstanceState.getInt(GLOBAL_MULTIPLIER);
+            newWord = String.valueOf(savedInstanceState.getCharSequence(WORD));
             ((TextView) findViewById(R.id.word)).setText(newWord);
-            switcher=savedInstanceState.getInt(SWITCHER);
+            switcher = savedInstanceState.getInt(SWITCHER);
 
-        }else{
+        } else {
             ((TextView) findViewById(R.id.tempScore)).setText("0");
             ((TextView) findViewById(R.id.player1_score)).setText("0");
             ((TextView) findViewById(R.id.player2_score)).setText("0");
             ((TextView) findViewById(R.id.word)).setText("");
-            switcher=0;
+            switcher = 0;
         }
 
         TurnLayoutBrightOnOff(switcher);
         super.onCreate(savedInstanceState);
     }
 
-    protected void onSaveInstanceState(Bundle savedInstanceState){
+    protected void onSaveInstanceState(Bundle savedInstanceState) {
 
-        savedInstanceState.putInt(TEMP_SCORE,score);
-        savedInstanceState.putInt(MULTIPLIER,multiplier);
-        savedInstanceState.putInt(GLOBAL_MULTIPLIER,globalMultiplier);
-        savedInstanceState.putInt(SCORE_P1,playerScore1);
+        savedInstanceState.putInt(TEMP_SCORE, score);
+        savedInstanceState.putInt(MULTIPLIER, multiplier);
+        savedInstanceState.putInt(GLOBAL_MULTIPLIER, globalMultiplier);
+        savedInstanceState.putInt(SCORE_P1, playerScore1);
         savedInstanceState.putInt(SCORE_P2, playerScore2);
         savedInstanceState.putCharSequence(WORD, ((TextView) findViewById(R.id.word)).getText());
-        savedInstanceState.putInt(SWITCHER,switcher);
+        savedInstanceState.putInt(SWITCHER, switcher);
         super.onSaveInstanceState(savedInstanceState);
     }
 
-
-    protected void onRestoreInstanceState(Bundle savedInstanceState){
-        savedInstanceState.putInt(TEMP_SCORE,score);
-        savedInstanceState.putInt(MULTIPLIER,multiplier);
-        savedInstanceState.putInt(GLOBAL_MULTIPLIER,globalMultiplier);
-        savedInstanceState.putInt(SCORE_P1,playerScore1);
-        savedInstanceState.putInt(SCORE_P2, playerScore2);
-        savedInstanceState.putCharSequence(WORD, ((TextView) findViewById(R.id.word)).getText());
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        savedInstanceState.getInt(TEMP_SCORE, score);
+        savedInstanceState.getInt(MULTIPLIER, multiplier);
+        savedInstanceState.getInt(GLOBAL_MULTIPLIER, globalMultiplier);
+        savedInstanceState.getInt(SCORE_P1, playerScore1);
+        savedInstanceState.getInt(SCORE_P2, playerScore2);
+        savedInstanceState.getCharSequence(WORD, ((TextView) findViewById(R.id.word)).getText());
+        savedInstanceState.getInt(SWITCHER, switcher);
         TurnLayoutBrightOnOff(switcher);
-        savedInstanceState.putInt(SWITCHER,switcher);
         super.onSaveInstanceState(savedInstanceState);
     }
 
     public void LetterMultiplyBy2(View view) {
         multiplier = 2;
-        switcher=1;
+        switcher = 1;
         TurnLayoutBrightOnOff(1);
     }
 
     public void LetterMultiplyBy3(View view) {
         multiplier = 3;
-        switcher=2;
+        switcher = 2;
         TurnLayoutBrightOnOff(2);
     }
 
     public void WordMultiplyBy2(View view) {
         globalMultiplier = 2 * globalMultiplier;
         TextView wordView = (TextView) findViewById(R.id.word);
-        newWord = "(x2) "+wordView.getText();
+        newWord = "(x2) " + wordView.getText();
         wordView.setText(newWord);
     }
 
     public void WordMultiplyBy3(View view) {
         globalMultiplier = 3 * globalMultiplier;
         TextView wordView = (TextView) findViewById(R.id.word);
-        newWord = "(x3) "+wordView.getText();
+        newWord = "(x3) " + wordView.getText();
         wordView.setText(newWord);
     }
 
@@ -154,7 +153,7 @@ public class MainActivity extends AppCompatActivity {
         newWord = wordView.getText() + "a";
         wordView.setText(newWord);
         Add1(view);
-        switcher=0;
+        switcher = 0;
         TurnLayoutBrightOnOff(0);
     }
 
@@ -163,7 +162,7 @@ public class MainActivity extends AppCompatActivity {
         newWord = wordView.getText() + "c";
         wordView.setText(newWord);
         Add1(view);
-        switcher=0;
+        switcher = 0;
         TurnLayoutBrightOnOff(0);
     }
 
@@ -172,7 +171,7 @@ public class MainActivity extends AppCompatActivity {
         newWord = wordView.getText() + "e";
         wordView.setText(newWord);
         Add1(view);
-        switcher=0;
+        switcher = 0;
         TurnLayoutBrightOnOff(0);
     }
 
@@ -181,7 +180,7 @@ public class MainActivity extends AppCompatActivity {
         newWord = wordView.getText() + "i";
         wordView.setText(newWord);
         Add1(view);
-        switcher=0;
+        switcher = 0;
         TurnLayoutBrightOnOff(0);
     }
 
@@ -190,7 +189,7 @@ public class MainActivity extends AppCompatActivity {
         newWord = wordView.getText() + "o";
         wordView.setText(newWord);
         Add1(view);
-        switcher=0;
+        switcher = 0;
         TurnLayoutBrightOnOff(0);
     }
 
@@ -199,7 +198,7 @@ public class MainActivity extends AppCompatActivity {
         newWord = wordView.getText() + "r";
         wordView.setText(newWord);
         Add1(view);
-        switcher=0;
+        switcher = 0;
         TurnLayoutBrightOnOff(0);
     }
 
@@ -208,7 +207,7 @@ public class MainActivity extends AppCompatActivity {
         newWord = wordView.getText() + "s";
         wordView.setText(newWord);
         Add1(view);
-        switcher=0;
+        switcher = 0;
         TurnLayoutBrightOnOff(0);
     }
 
@@ -217,7 +216,7 @@ public class MainActivity extends AppCompatActivity {
         newWord = wordView.getText() + "t";
         wordView.setText(newWord);
         Add1(view);
-        switcher=0;
+        switcher = 0;
         TurnLayoutBrightOnOff(0);
     }
 
@@ -226,7 +225,7 @@ public class MainActivity extends AppCompatActivity {
         newWord = wordView.getText() + "l";
         wordView.setText(newWord);
         Add2(view);
-        switcher=0;
+        switcher = 0;
         TurnLayoutBrightOnOff(0);
     }
 
@@ -235,7 +234,7 @@ public class MainActivity extends AppCompatActivity {
         newWord = wordView.getText() + "m";
         wordView.setText(newWord);
         Add2(view);
-        switcher=0;
+        switcher = 0;
         TurnLayoutBrightOnOff(0);
     }
 
@@ -244,7 +243,7 @@ public class MainActivity extends AppCompatActivity {
         newWord = wordView.getText() + "n";
         wordView.setText(newWord);
         Add2(view);
-        switcher=0;
+        switcher = 0;
         TurnLayoutBrightOnOff(0);
     }
 
@@ -253,7 +252,7 @@ public class MainActivity extends AppCompatActivity {
         newWord = wordView.getText() + "p";
         wordView.setText(newWord);
         Add3(view);
-        switcher=0;
+        switcher = 0;
         TurnLayoutBrightOnOff(0);
     }
 
@@ -262,7 +261,7 @@ public class MainActivity extends AppCompatActivity {
         newWord = wordView.getText() + "b";
         wordView.setText(newWord);
         Add4(view);
-        switcher=0;
+        switcher = 0;
         TurnLayoutBrightOnOff(0);
     }
 
@@ -271,7 +270,7 @@ public class MainActivity extends AppCompatActivity {
         newWord = wordView.getText() + "d";
         wordView.setText(newWord);
         Add4(view);
-        switcher=0;
+        switcher = 0;
         TurnLayoutBrightOnOff(0);
     }
 
@@ -280,7 +279,7 @@ public class MainActivity extends AppCompatActivity {
         newWord = wordView.getText() + "f";
         wordView.setText(newWord);
         Add4(view);
-        switcher=0;
+        switcher = 0;
         TurnLayoutBrightOnOff(0);
     }
 
@@ -289,7 +288,7 @@ public class MainActivity extends AppCompatActivity {
         newWord = wordView.getText() + "g";
         wordView.setText(newWord);
         Add4(view);
-        switcher=0;
+        switcher = 0;
         TurnLayoutBrightOnOff(0);
     }
 
@@ -298,7 +297,7 @@ public class MainActivity extends AppCompatActivity {
         newWord = wordView.getText() + "u";
         wordView.setText(newWord);
         Add4(view);
-        switcher=0;
+        switcher = 0;
         TurnLayoutBrightOnOff(0);
     }
 
@@ -307,7 +306,7 @@ public class MainActivity extends AppCompatActivity {
         newWord = wordView.getText() + "v";
         wordView.setText(newWord);
         Add4(view);
-        switcher=0;
+        switcher = 0;
         TurnLayoutBrightOnOff(0);
     }
 
@@ -316,7 +315,7 @@ public class MainActivity extends AppCompatActivity {
         newWord = wordView.getText() + "h";
         wordView.setText(newWord);
         Add8(view);
-        switcher=0;
+        switcher = 0;
         TurnLayoutBrightOnOff(0);
     }
 
@@ -325,7 +324,7 @@ public class MainActivity extends AppCompatActivity {
         newWord = wordView.getText() + "z";
         wordView.setText(newWord);
         Add8(view);
-        switcher=0;
+        switcher = 0;
         TurnLayoutBrightOnOff(0);
     }
 
@@ -334,19 +333,19 @@ public class MainActivity extends AppCompatActivity {
         newWord = wordView.getText() + "q";
         wordView.setText(newWord);
         Add10(view);
-        switcher=0;
+        switcher = 0;
         TurnLayoutBrightOnOff(0);
     }
 
 
     public void Reset(View view) {
         score = 0;
-        multiplier=1;
-        globalMultiplier=1;
+        multiplier = 1;
+        globalMultiplier = 1;
         TextView wordView = (TextView) findViewById(R.id.word);
         wordView.setText("");
         DisplayTempScore(score);
-        switcher=0;
+        switcher = 0;
         TurnLayoutBrightOnOff(0);
     }
 
