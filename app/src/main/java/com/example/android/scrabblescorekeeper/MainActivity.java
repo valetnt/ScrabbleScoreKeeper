@@ -364,45 +364,27 @@ public class MainActivity extends AppCompatActivity {
 
     public void SelectPlayer1(View view) {
         DisplayPlayer1Score(score);
-        globalMultiplier = 1;
-        TextView wordView = (TextView) findViewById(R.id.word);
-        wordView.setText("");
-        score = 0;
-        DisplayTempScore(0);
-        switcher=0;
-        TurnLayoutBrightOnOff(0);
+        Reset(view);
     }
 
     public void SelectPlayer2(View view) {
         DisplayPlayer2Score(score);
-        globalMultiplier = 1;
-        TextView wordView = (TextView) findViewById(R.id.word);
-        wordView.setText("");
-        score = 0;
-        DisplayTempScore(0);
-        switcher=0;
-        TurnLayoutBrightOnOff(0);
+        Reset(view);
     }
 
     public void AddBonusToPlayer1(View view) {
         TextView scoreView = (TextView) findViewById(R.id.player1_score);
         playerScore1 += 10;
         scoreView.setText(String.valueOf(playerScore1));
-        switcher=0;
-        TurnLayoutBrightOnOff(0);
     }
 
     public void AddBonusToPlayer2(View view) {
         TextView scoreView = (TextView) findViewById(R.id.player2_score);
         playerScore2 += 10;
         scoreView.setText(String.valueOf(playerScore2));
-        switcher=0;
-        TurnLayoutBrightOnOff(0);
     }
 
     public void ResetAll(View view) {
-        globalMultiplier = 1;
-        multiplier = 1;
         playerScore1 = 0;
         playerScore2 = 0;
         DisplayPlayer1Score(0);

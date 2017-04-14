@@ -11,14 +11,13 @@
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="7"
-        android:background="@color/colorBackgroundDarker"
+        android:background="@color/colorBackgroundLighter"
         android:orientation="vertical">
 
         <LinearLayout
             android:id="@+id/scoreBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
             android:baselineAligned="false"
             android:orientation="horizontal"
             android:padding="@dimen/MediumMargin">
@@ -62,7 +61,6 @@
                     android:layout_gravity="center_horizontal"
                     android:onClick="AddBonusToPlayer1"
                     android:text="@string/addBonus" />
-
 
             </LinearLayout>
 
@@ -110,7 +108,6 @@
                     android:layout_gravity="center_horizontal"
                     android:onClick="AddBonusToPlayer2"
                     android:text="@string/addBonus" />
-
 
             </LinearLayout>
 
@@ -381,6 +378,7 @@
                     android:text="@string/z" />
 
             </android.support.v7.widget.ButtonBarLayout>
+
         </LinearLayout>
 
         <RelativeLayout

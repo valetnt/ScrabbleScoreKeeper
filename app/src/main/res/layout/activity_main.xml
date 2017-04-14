@@ -11,10 +11,10 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="7"
-        android:background="@color/colorBackgroundDarker"
-        android:padding="@dimen/MediumMargin"
+        android:background="@color/colorBackgroundLighter"
         android:baselineAligned="false"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:padding="@dimen/MediumMargin">
 
         <LinearLayout
             android:layout_width="0dp"
@@ -56,13 +56,12 @@
                 android:onClick="AddBonusToPlayer1"
                 android:text="@string/addBonus" />
 
-
         </LinearLayout>
 
         <TextView
             android:layout_width="1dp"
             android:layout_height="match_parent"
-            android:background="@color/colorPrimaryDark"/>
+            android:background="@color/colorPrimaryDark" />
 
         <LinearLayout
             android:layout_width="0dp"
@@ -104,7 +103,6 @@
                 android:onClick="AddBonusToPlayer2"
                 android:text="@string/addBonus" />
 
-
         </LinearLayout>
 
     </LinearLayout>
@@ -145,20 +143,20 @@
                 style="@style/ResetButtonView"
                 android:layout_width="@dimen/ResetButtonWidth"
                 android:layout_height="@dimen/ResetButtonHeight"
-                android:layout_alignParentRight="true"
                 android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
                 android:onClick="Reset"
                 android:text="@string/reset" />
 
         </RelativeLayout>
 
-            <TextView
-                android:id="@+id/word"
-                style="@style/WordTextView"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/WordTextViewHeight"
-                android:text=""
-                android:gravity="center_vertical" />
+        <TextView
+            android:id="@+id/word"
+            style="@style/WordTextView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/WordTextViewHeight"
+            android:gravity="center_vertical"
+            android:text="" />
 
         <LinearLayout
             android:id="@+id/keyboard"

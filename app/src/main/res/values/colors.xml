@@ -2,8 +2,8 @@
 <resources>
     <color name="colorPrimary">#455A64</color>
     <color name="colorPrimaryDark">#37474F</color>
-    <color name="colorBackground">#455A64</color>
-    <color name="colorBackgroundDarker">#FFF8E1</color>
+    <color name="colorBackgroundDark">#607D8B</color>
+    <color name="colorBackgroundLighter">#FFF8E1</color>
     <color name="colorEditableTextView">#FFFFFF</color>
 
     <color name="colorTextButton2L">#B71C1C</color>

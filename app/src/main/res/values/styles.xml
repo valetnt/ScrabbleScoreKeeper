@@ -32,7 +32,7 @@
     </style>
 
     <style name="Background" parent="AppTheme">
-        <item name="android:background">@color/colorBackground</item>
+        <item name="android:background">@color/colorBackgroundDark</item>
         <item name="android:padding">@dimen/SmallMargin</item>
     </style>
 
